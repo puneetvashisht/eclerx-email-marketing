@@ -7,13 +7,32 @@
     <form action="/someurl" method="POST">
 
             <label for="name">Name: </label>
-            <input type="text" name="name"/>
+            <input type="text" name="name" placeholder="Enter name(min 6 length)" required autofocus/>
 
             <label for="email">Email: </label>
-            <input type="email" name="email"/>
+            <input type="email" name="email" required/>
 
             <label for="password">Password: </label>
             <input type="password" name="password"/>
+             <br/>
+
+            <input type="radio" name="sex" value="male" /> Male
+            <br />
+            <input type="radio" name="sex" value="female" /> Female
+
+            <br/>
+
+            <input type="checkbox" name="interests" value="Football" /> Football<br />
+            <input type="checkbox" name="interests" value="Cricket" /> Cricket<br/> 
+            <input type="checkbox" name="interests" value="Tennis" /> Tennis<br/> 
+
+            <br/>
+
+            <input type="range" min="1" max="8"/>
+            <input type="number" min="1" max="8"/>
+            <input type="month"/>
+            <input type="date"/>
+
 
             <button type="submit">Register</button>
     </form>
