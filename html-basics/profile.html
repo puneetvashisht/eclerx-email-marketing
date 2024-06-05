@@ -1,14 +1,34 @@
 <html>
 <head>
     <title>Profile Page</title>
+    <style>
+        /* p[name="intro"]  {
+            color: red
+        } */
+        li:first-child {
+            color: hsla(227, 70%, 30%, 0.941);
+            /* margin-bottom: 50px;
+            margin-left: 100px */
+
+            /* 
+            border-width: 10px;
+            border-color: black;
+            border-style: solid; */
+            border: 2px solid blue;
+            padding:10px
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h1>Puneet Vashisht</h1>
+        <h1 class="warning">Puneet Vashisht
+            <p>This should turn red</p>
+        </h1>
         <h2>Corporate Trainer & Consulting</h2>
-        <p>Hello! My name is Puneet Vashisht. I'm also a full stack developer!</p>
+        <p id="dontlike" class="warning">Hello! My name is Puneet Vashisht. I'm also a full stack developer!</p>
+        <p name="intro">Hello! My name is Puneet Vashisht. I'm also a full stack developer!</p>
         <ul>
-            <li>Coding</li>
+            <li  class="warning">Coding</li>
             <li>Hiking</li>
             <li>Reading</li>
         </ul>
