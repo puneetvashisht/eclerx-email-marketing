@@ -1,0 +1,141 @@
+<!-- Responsive E-commerce Newsletter
+You've been assigned to design a responsive e-commerce newsletter for an online store's summer collection promotion. The newsletter should feature a header with the company logo and navigation links,
+ a footer with contact information and social media links, a sidebar displaying additional promotions or categories, and a main section showcasing product cards. 
+ Ensure the layout adjusts seamlessly for both large and small screens, with product cards transitioning from a row layout on larger screens to a stacked layout on smaller screens.
+
+Objective: Implement a responsive newsletter layout using Flexbox and media queries to ensure optimal display across various screen sizes, maintaining readability and visual appeal.
+
+Task:
+
+Create an HTML structure for the newsletter with a header, footer, sidebar, and main section containing product cards.
+Utilize Flexbox to arrange the components and content within the header, footer, sidebar, and product cards.
+Implement media queries for multiple breakpoints to adjust the layout for different screen sizes, ensuring a smooth transition between row and stacked layouts for the product cards. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        min-height: 100vh;
+      }
+      header,
+      footer,
+      main {
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      header {
+        text-align: center;
+      }
+      footer {
+        text-align: center;
+      }
+      .sidebar {
+        padding: 20px;
+        background-color: #e0e0e0;
+      }
+      .main-content {
+        padding: 20px;
+      }
+      .product-card {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .product-card img {
+        width: 100%;
+        height: auto;
+      }
+      .product-info {
+        padding: 20px;
+      }
+      .product-info h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .product-info p {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+      }
+      @media (max-width: 600px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Company Logo</h1>
+        <nav>
+          <a href="#">Home</a> | <a href="#">Products</a> |
+          <a href="#">About</a> |
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+      <main>
+        <div class="sidebar">
+          <h2>Sidebar</h2>
+        </div>
+        <div class="main-content">
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 1" />
+            <div class="product-info">
+              <h3>Product 1</h3>
+              <p>Description of product 1</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 2" />
+            <div class="product-info">
+              <h3>Product 2</h3>
+              <p>Description of product 2</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 3" />
+            <div class="product-info">
+              <h3>Product 3</h3>
+              <p>Description of product 3</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 4" />
+            <div class="product-info">
+              <h3>Product 4</h3>
+              <p>Description of product 4</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 5" />
+            <div class="product-info">
+              <h3>Product 5</h3>
+              <p>Description of product 5</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 6" />
+            <div class="product-info">
+              <h3>Product 6</h3>
+              <p>Description of product 6</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          Contact us: email@example.com | Follow us: <a href="#">Facebook</a>,
+          <a href="#">Twitter</a>, <a href="#">Instagram</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
