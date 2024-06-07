@@ -7,6 +7,7 @@ Create an HTML email with sections for the header, event details, schedule, spea
 Use Flexbox to arrange speaker profiles in a grid layout on larger screens.
 Use media queries to stack speaker profiles vertically on smaller screens.
 Ensure images and buttons are responsive and centered. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,10 +39,21 @@ Ensure images and buttons are responsive and centered. -->
         margin: 20px 0;
       }
       .speakers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
       }
       .speaker-card {
+        flex: 1 1 45%;
+        margin: 10px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        text-align: center;
       }
       .speaker-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
       }
       .cta {
         text-align: center;
@@ -52,6 +64,15 @@ Ensure images and buttons are responsive and centered. -->
         font-size: 16px;
       }
       @media (max-width: 600px) {
+        .speakers {
+          flex-direction: column;
+        }
+        .speaker-card {
+          margin: 10px 0;
+        }
+        .cta button {
+          width: 100%;
+        }
       }
     </style>
   </head>

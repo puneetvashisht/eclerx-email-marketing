@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>CSS Media Queries Sidebar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font: 14px Georgia, serif;
+        background: #ccc;
+      }
+
+      article,
+      aside,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+
+      h2 {
+        font: 24px Georgia;
+        margin: 0 0 10px 0;
+      }
+      h3 {
+        margin: 0 0 8px 0;
+      }
+      p {
+        margin: 0 0 20px 0;
+      }
+
+      #fluid-wrap {
+        width: 70%;
+        margin: 60px auto;
+        padding: 20px;
+        background: #eee;
+        overflow: hidden;
+      }
+
+      #sidebar {
+        width: 35%;
+        float: left;
+      }
+
+      #sidebar ul {
+        list-style: none;
+      }
+
+      #sidebar ul li a {
+        color: #900;
+        text-decoration: none;
+        padding: 3px 0;
+        display: block;
+      }
+
+      @media all and (min-width: 1001px) {
+        #sidebar ul li a:after {
+          content: " (" attr(data-email) ")";
+          font-size: 11px;
+          font-style: italic;
+          color: #666;
+        }
+      }
+
+      @media all and (max-width: 1000px) and (min-width: 700px) {
+        #sidebar ul li a:before {
+          content: "Email: ";
+          font-style: italic;
+          color: #666;
+        }
+      }
+
+      @media all and (max-width: 699px) and (min-width: 520px),
+        (min-width: 1151px) {
+        #sidebar ul li a {
+          padding-left: 21px;
+          background: url(./images/email.png) left center no-repeat;
+        }
+      }
+
+      #main-content {
+        width: 65%;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fluid-wrap">
+      <div id="sidebar">
+        <h3>Super team:</h3>
+        <ul id="nav">
+          <li>
+            <a
+              data-email="chriscoyier@gmail.com"
+              href="mailto:chriscoyier@gmail.com"
+              >Chris Coyier</a
+            >
+          </li>
+          <li>
+            <a
+              data-email="isuredo@likeher.com"
+              href="mailto:isuredo@likeher.com"
+              >Elisabeth Moss</a
+            >
+          </li>
+          <li>
+            <a data-email="marry@me.com" href="mailto:marry@me.com"
+              >Amanda Righetti</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="main-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          vulputate, leo vel dapibus malesuada, odio odio tempor lectus, nec
+          iaculis nunc metus vitae leo. Suspendisse potenti. Proin id diam ut
+          tortor tincidunt feugiat. Aliquam eu dui ac libero ultrices mattis.
+        </p>
+        <p>
+          Nullam vulputate commodo justo, eget pharetra risus aliquam sed.
+          Vestibulum tincidunt ante a arcu volutpat placerat. Curabitur eget
+          bibendum dolor, quis condimentum mi. Vestibulum id ligula sed risus
+          eleifend rutrum. Suspendisse vel eros vitae purus tincidunt vestibulum
+          sit amet id quam.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -27,8 +27,16 @@ Use media queries for multiple breakpoints to adjust the layout for different de
         text-align: center;
       }
       .pricing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
       }
       .pricing-plan {
+        flex: 1 1 30%;
+        margin: 10px;
+        padding: 10px;
+        background-color: aliceblue;
+        text-align: center;
       }
       .pricing-plan h2 {
         margin: 10px 0;
@@ -49,8 +57,17 @@ Use media queries for multiple breakpoints to adjust the layout for different de
         font-size: 16px;
       }
       @media (max-width: 900px) {
+        .pricing-plan {
+       flex: 1 1 45%
+      }
       }
       @media (max-width: 600px) {
+        .pricing {
+          flex-direction: column;
+      }
+      .pricing-plan {
+       flex: 1 0 100%
+      }
       }
     </style>
   </head>
@@ -75,6 +92,20 @@ Use media queries for multiple breakpoints to adjust the layout for different de
             <li>Feature 3</li>
             <li>Feature 4</li>
           </ul>
+          <div class="cta"><button>Select Plan</button></div>
+        </div>
+
+        <div class="pricing-plan">
+          <h2>Premium Plan</h2>
+          <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+            <li>Feature 4</li>
+            <li>Feature 4</li>
+            <li>Feature 4</li>
+          </ul>
+          <div class="cta"><button>Select Plan</button></div>
         </div>
       </div>
     </div>

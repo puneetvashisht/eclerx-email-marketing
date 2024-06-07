@@ -27,6 +27,8 @@ Implement media queries for multiple breakpoints to adjust the layout for differ
       header,
       footer,
       main {
+        display: flex; 
+        flex: 0 0 auto;
         padding: 20px;
         background-color: #f0f0f0;
       }
@@ -37,13 +39,19 @@ Implement media queries for multiple breakpoints to adjust the layout for differ
         text-align: center;
       }
       .sidebar {
+        flex: 0 0  250px;
         padding: 20px;
         background-color: #e0e0e0;
       }
       .main-content {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         padding: 20px;
       }
       .product-card {
+        flex : 0 0 calc(33% -20px);
         margin-bottom: 20px;
         background-color: #fff;
         border: 1px solid #ccc;
@@ -66,8 +74,19 @@ Implement media queries for multiple breakpoints to adjust the layout for differ
         font-size: 14px;
       }
       @media (max-width: 900px) {
+        .product-card {
+        flex : 0 0 calc(50% -20px);
+
       }
+    }
       @media (max-width: 600px) {
+        .product-card {
+        flex : 0 0 100%;
+
+      }
+      .sidebar {
+        display: none;
+      }
       }
     </style>
   </head>
