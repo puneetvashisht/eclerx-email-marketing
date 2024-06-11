@@ -1,0 +1,147 @@
+<!-- You are working for a fitness brand, FitLife, which is launching a new range of fitness equipment. You need to create an engaging promotional email to showcase the new products and encourage recipients to make a purchase. The email will include interactive elements such as buttons for call-to-actions (CTAs), a form for subscribing to the newsletter, and a GIF to attract attention.
+
+Tasks
+Create a Compelling Header: Introduce the new product range.
+Add Interactive Buttons: Encourage recipients to view different categories of fitness equipment.
+Include a Subscription Form: Allow recipients to subscribe to the newsletter for exclusive updates.
+Incorporate an Eye-catching GIF: Highlight a special offer or promotion.
+Ensure Best Practices: Make sure all elements are accessible and mobile-friendly. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitLife New Range Launch</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      .email-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+      }
+      .header,
+      .footer {
+        background-color: #4caf50;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .button {
+        background-color: #4caf50;
+        color: #ffffff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 10px 0;
+      }
+      .form-container {
+        margin: 20px 0;
+      }
+      .form-container label {
+        display: block;
+        margin: 5px 0 5px;
+      }
+      .form-container input,
+      .form-container select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <table border="1" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="header">
+            <h1>FitLife New Fitness Equipment</h1>
+          </td>
+        </tr>
+        <tr>
+          <td class="content">
+            <h2>Discover Our Latest Range</h2>
+            <p>
+              Upgrade your workout with our new fitness equipment designed to
+              help you achieve your fitness goals.
+            </p>
+            <a href="https://fitlife.com/shop/equipment" class="button"
+              >Shop Equipment</a
+            >
+            <a href="https://fitlife.com/shop/accessories" class="button"
+              >Shop Accessories</a
+            >
+            <div class="form-container">
+              <h2>Subscribe to Our Newsletter</h2>
+              <p>Stay updated with the latest news and exclusive offers.</p>
+              <form action="https://fitlife.com/subscribe" method="post">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required />
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="fitness-goal">Fitness Goal:</label>
+                <select id="fitness-goal" name="fitness-goal" required>
+                  <option value="weight-loss">Weight Loss</option>
+                  <option value="muscle-gain">Muscle Gain</option>
+                  <option value="endurance">Endurance</option>
+                  <option value="flexibility">Flexibility</option>
+                </select>
+
+                <button type="submit" class="button">Subscribe</button>
+              </form>
+            </div>
+            <h2>Special Offer</h2>
+            <p>Get 20% off on your first purchase!</p>
+            <img
+              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHY3Njgwb2JvbGNxd2N3dTA5eTBvbXFxNmhtOWdubDcxcDM1M3VhdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6fJ6dOc8NPAgv7FK/giphy.webp"
+              alt="Special Offer"
+              style="max-width: 100%; height: auto"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="footer">
+            <p>
+              You're receiving this email because you subscribed to FitLife
+              updates.
+            </p>
+            <p>
+              <a href="https://fitlife.com/unsubscribe" style="color: #ffffff"
+                >Unsubscribe</a
+              >
+              |
+              <a href="https://fitlife.com/privacy" style="color: #ffffff"
+                >Privacy Policy</a
+              >
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+<img
+  src="https://example.com/animated.gif"
+  alt="Exciting Offer"
+  style="max-width: 100%; height: auto"
+/>

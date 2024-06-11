@@ -1,0 +1,214 @@
+<!-- Designing a Responsive Promotional Email for a Summer Sale
+Objective:
+Design a responsive promotional email for an e-commerce store's summer sale. The email should include a header with the company logo and navigation links, a featured banner image, a section showcasing the top three sale items with images, descriptions, and prices, and a footer with contact information and social media links. The design should be mobile-first and ensure that the email looks good on all devices.
+
+Tasks:
+Understanding Responsive Design in Emails
+
+Task 1.1: Define what responsive design is and its importance in email design.
+Task 1.2: Explain how media queries work and how they are used in email design.
+Task 1.3: Describe the concept of mobile-first design and its advantages.
+Task 1.4: Provide strategies to ensure emails look good on all devices.
+Adding Images and Graphics
+
+Task 2.1: Use best practices for using images in emails.
+Task 2.2: optimize images for email to reduce load times without sacrificing quality.
+Task 2.3: Demonstrate how to use background images in email design.
+Task 2.4: Discuss the importance of adding alt text to images for accessibility and deliverability. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Sale Email</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .email-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #dddddd;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+      .header .logo-container {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+      }
+      .header img {
+        max-width: 100%;
+        height: auto;
+      }
+      .navigation {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .navigation a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+      }
+      .banner {
+        width: 100%;
+        text-align: center;
+      }
+      .banner img {
+        max-width: 80%;
+        max-height: 200px;
+      }
+      .content {
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex: 1;
+      }
+      .product {
+        flex: 0 0 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+        text-align: center;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .product img {
+        width: 100%;
+        height: auto;
+      }
+      .product h3,
+      .product p {
+        font-family: "Roboto", sans-serif;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #333;
+        color: #fff;
+      }
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 5px;
+      }
+      @media (max-width: 900px) {
+        .product {
+          flex: 0 0 calc(50% - 20px);
+          max-width: calc(50% - 20px);
+        }
+      }
+      @media (max-width: 600px) {
+        .product {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .header .logo-container {
+          width: 30px;
+          height: 30px;
+        }
+        .banner img {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <div class="logo-container">
+          <img src="https://picsum.photos/200/300" alt="Company Logo" />
+        </div>
+        <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="banner">
+        <img src="https://picsum.photos/600/200" alt="Summer Sale Banner" />
+        <h2>Summer Sale Now On! Limited Time Offer</h2>
+      </div>
+      <div class="content">
+        <div class="product">
+          <img src="https://picsum.photos/200/300" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>$19.99</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula
+            ligula quis risus dignissim, eu facilisis urna cursus.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/200/300" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$29.99</p>
+          <p>
+            Proin bibendum urna ut est posuere, sit amet fermentum libero
+            efficitur. Vestibulum ut nibh eget magna fermentum vulputate.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/200/300" alt="Product 3" />
+          <h3>Product 3</h3>
+          <p>$39.99</p>
+          <p>
+            Nullam hendrerit metus id velit cursus, a venenatis neque varius.
+            Nunc ac convallis magna.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/200/300" alt="Product 4" />
+          <h3>Product 4</h3>
+          <p>$49.99</p>
+          <p>
+            Fusce a eros eget purus ultricies tempus ac a felis. Integer eget
+            sodales purus.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/200/300" alt="Product 5" />
+          <h3>Product 5</h3>
+          <p>$59.99</p>
+          <p>
+            Quisque ut justo nec magna viverra tempus. Sed fermentum odio id
+            risus gravida malesuada.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/200/300" alt="Product 6" />
+          <h3>Product 6</h3>
+          <p>$69.99</p>
+          <p>
+            Nam euismod purus sed mi blandit, sed viverra est convallis. Cras ac
+            velit at neque faucibus posuere.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Contact us: email@example.com</p>
+        <p>
+          Follow us: <a href="#">Facebook</a>, <a href="#">Twitter</a>,
+          <a href="#">Instagram</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

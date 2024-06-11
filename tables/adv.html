@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Layout Demonstration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      .email-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+      }
+      .header,
+      .footer {
+        background-color: #009688;
+        background-image: url("https://picsum.photos/600/200");
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .two-column {
+        width: 100%;
+      }
+      .two-column td {
+        vertical-align: top;
+      }
+      .two-column .left-column {
+        width: 50%;
+        padding-right: 10px;
+      }
+      .two-column .right-column {
+        width: 50%;
+        padding-left: 10px;
+      }
+      .button {
+        background-color: #009688;
+        color: #ffffff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <table border="1" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="header" colspan="2">
+            <h1>Adventure Gear Co.</h1>
+          </td>
+        </tr>
+        <tr>
+          <td class="content" colspan="2">
+            <p>
+              Welcome to our latest collection of hiking gear. Explore the best
+              equipment for your next adventure.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="content" rowspan="2" style="padding-right: 10px">
+            <h2>Backpacks</h2>
+            <p>Durable and spacious backpacks for all your hiking needs.</p>
+            <a
+              href="https://www.adventuregearco.com/shop/backpacks"
+              class="button"
+              >Shop Backpacks</a
+            >
+          </td>
+          <td class="content" style="padding-left: 10px">
+            <h2>Boots</h2>
+            <p>Comfortable and sturdy hiking boots for any terrain.</p>
+            <a href="https://www.adventuregearco.com/shop/boots" class="button"
+              >Shop Boots</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="content" style="padding-left: 10px">
+            <h2>Accessories</h2>
+            <p>Essential accessories for your hiking trips.</p>
+            <a
+              href="https://www.adventuregearco.com/shop/accessories"
+              class="button"
+              >Shop Accessories</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="footer" colspan="2">
+            <p>
+              You're receiving this email because you subscribed to Adventure
+              Gear Co. updates.
+            </p>
+            <p>
+              <a
+                href="https://www.adventuregearco.com/unsubscribe"
+                style="color: #ffffff"
+                >Unsubscribe</a
+              >
+              |
+              <a
+                href="https://www.adventuregearco.com/privacy"
+                style="color: #ffffff"
+                >Privacy Policy</a
+              >
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
