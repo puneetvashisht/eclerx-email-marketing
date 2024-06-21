@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Store Special Event</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+      .email-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        background-color: #333;
+        color: white;
+      }
+      .header .logo-container {
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+      .header img {
+        max-width: 100%;
+        height: auto;
+      }
+      .navigation {
+        text-align: center;
+      }
+      .navigation a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+      }
+      .banner {
+        width: 100%;
+        height: 250px;
+        text-align: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .banner h2 {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      .content {
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .product {
+        flex: 0 0 calc(30% - 20px);
+        max-width: calc(30% - 20px);
+        text-align: center;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .product img {
+        width: 100%;
+        height: auto;
+      }
+      .product h3,
+      .product p {
+        padding: 10px;
+        font-family: "Montserrat", sans-serif;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #333;
+        color: #fff;
+      }
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media (max-width: 900px) {
+        .product {
+          flex: 0 0 calc(45% - 20px);
+          max-width: calc(45% - 20px);
+        }
+      }
+      @media (max-width: 600px) {
+        .product {
+          flex: 0 0 calc(100% - 20px);
+          max-width: calc(100% - 20px);
+        }
+        .header .logo-container {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      @media (min-width: 901px) {
+        .banner {
+          background-image: url("https://picsum.photos/id/1000/800/400");
+        }
+      }
+      @media (max-width: 900px) {
+        .banner {
+          background-image: url("https://picsum.photos/id/1001/600/300");
+        }
+      }
+      @media (max-width: 600px) {
+        .banner {
+          background-image: url("https://picsum.photos/id/1002/400/200");
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <div class="logo-container">
+          <img src="https://picsum.photos/id/1011/200/200" alt="Company Logo" />
+        </div>
+        <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="banner">
+        <h2>Special Event! Limited Time Offer</h2>
+      </div>
+      <img
+        src="https://image.ltms.app/t/dvymec3ajj81c6fpnwzk704z3.gif?exp=2024-06-18T09%3A51%3A00.0000000-08%3A00"
+        width="99%"
+      />
+      <div class="content">
+        <div class="product">
+          <img src="https://picsum.photos/id/1021/300/300" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>$19.99</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/id/1022/300/300" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$29.99</p>
+          <p>
+            Proin bibendum urna ut est posuere, sit amet fermentum libero
+            efficitur.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/id/1023/300/300" alt="Product 3" />
+          <h3>Product 3</h3>
+          <p>$39.99</p>
+          <p>
+            Nullam hendrerit metus id velit cursus, a venenatis neque varius.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/id/1024/300/300" alt="Product 4" />
+          <h3>Product 4</h3>
+          <p>$49.99</p>
+          <p>Fusce a eros eget purus ultricies tempus ac a felis.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Contact us: email@example.com</p>
+        <p>
+          Follow us: <a href="#">Facebook</a>, <a href="#">Twitter</a>,
+          <a href="#">Instagram</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

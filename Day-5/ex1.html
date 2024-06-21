@@ -1,0 +1,109 @@
+<!-- Detailed Event Invitation with Schedule and Speakers
+Objective: Create an event invitation email that includes a header, event details, a schedule, speaker profiles with images, and a registration button. The layout should adapt for different screen sizes.
+
+Task:
+
+Create an HTML email with sections for the header, event details, schedule, speaker profiles, and a registration button.
+Use Flexbox to arrange speaker profiles in a grid layout on larger screens.
+Use media queries to stack speaker profiles vertically on smaller screens.
+Ensure images and buttons are responsive and centered. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        padding: 20px;
+      }
+      .header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .details {
+        padding: 20px;
+        background-color: #f4f4f4;
+        margin: 20px 0;
+      }
+      .schedule {
+        padding: 20px;
+        background-color: #e4e4e4;
+        margin: 20px 0;
+      }
+      .speakers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .speaker-card {
+        flex: 1 1 45%;
+        margin: 10px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+      .speaker-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+      .cta {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .cta button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      @media (max-width: 600px) {
+        .speakers {
+          flex-direction: column;
+        }
+        .speaker-card {
+          margin: 10px 0;
+        }
+        .cta button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">You're Invited!</div>
+      <div class="details">
+        <h2>Event Details</h2>
+        <p>Join us for an exciting event on responsive design techniques!</p>
+      </div>
+      <div class="schedule">
+        <h3>Schedule</h3>
+        <p>10:00 AM - Introduction</p>
+        <p>11:00 AM - Advanced Techniques</p>
+        <p>12:00 PM - Q&A</p>
+      </div>
+      <div class="speakers">
+        <div class="speaker-card">
+          <img src="https://picsum.photos/200/300" alt="Speaker 1" />
+          <h2>Speaker 1</h2>
+          <p>Bio of speaker 1</p>
+        </div>
+        <div class="speaker-card">
+          <img src="https://picsum.photos/200/300" alt="Speaker 2" />
+          <h2>Speaker 2</h2>
+          <p>Bio of speaker 2</p>
+        </div>
+      </div>
+      <div class="cta">
+        <button>Register Now</button>
+      </div>
+    </div>
+  </body>
+</html>

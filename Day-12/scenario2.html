@@ -1,0 +1,175 @@
+<!-- Event Invitation Email for TechCon 2024
+Background:
+TechCon 2024 is a prestigious technology conference organized annually by TechSavvy Inc. 
+They want to send out an email invitation to their subscriber base, inviting them to attend and 
+participate 
+in the upcoming conference. The email should highlight key event details, schedule, speakers, 
+and registration information. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechCon 2024 Invitation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+      }
+      /* Responsive styles */
+      @media screen and (max-width: 600px) {
+        .main-table {
+          width: 100% !important;
+        }
+        .event-info {
+          padding: 10px !important;
+        }
+        .header img {
+          width: 50px;
+        }
+      }
+      /* Styles */
+      .main-table {
+        width: 600px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .header {
+        background-color: #0073e6;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .header img {
+        margin-right: 20px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .content h2 {
+        color: #0073e6;
+      }
+      .content p {
+        line-height: 1.6;
+      }
+      .event-info {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .event-info td {
+        padding: 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      .event-info .highlight {
+        background-color: #0073e6;
+        color: white;
+      }
+      .footer {
+        background-color: #f9f9f9;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+      }
+      .footer p {
+        color: #777;
+        font-size: 14px;
+      }
+      .footer a {
+        color: #0073e6;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="main-table" role="presentation" aria-hidden="true">
+      <tr>
+        <td>
+          <!-- Header -->
+          <table width="100%" role="banner">
+            <tr>
+              <td class="header">
+                <img src="https://picsum.photos/50" alt="TechSavvy Logo" />
+                <h1>TechCon 2024</h1>
+              </td>
+            </tr>
+          </table>
+          <!-- Content -->
+          <table width="100%" class="content" role="presentation">
+            <tr>
+              <td>
+                <h2>You're Invited to TechCon 2024!</h2>
+                <p>
+                  Join us for TechCon 2024, where industry leaders and tech
+                  enthusiasts gather to explore the latest trends and
+                  innovations.
+                </p>
+                <!-- Event Information -->
+                <table class="event-info" role="presentation">
+                  <tr>
+                    <td class="highlight" rowspan="2" style="width: 30%">
+                      <img
+                        src="https://picsum.photos/200/150"
+                        alt="TechCon 2024 Banner"
+                        width="100%"
+                      />
+                    </td>
+                    <td class="highlight" colspan="2">Event Details</td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%">March 15-17, 2024</td>
+                    <td style="width: 35%">San Francisco, CA</td>
+                  </tr>
+                  <tr>
+                    <td class="highlight" rowspan="3">Keynote Speakers</td>
+                    <td colspan="2">Tech Leaders Panel</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">AI & Robotics Innovations</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Future of Tech in Healthcare</td>
+                  </tr>
+                  <tr>
+                    <td class="highlight">Registration</td>
+                    <td colspan="2">
+                      <a href="#" style="color: #0073e6; text-decoration: none"
+                        >Register Now</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- Footer Section -->
+          <table width="100%" class="footer" role="contentinfo">
+            <tr>
+              <td>
+                <p>© 2024 TechSavvy Inc. All rights reserved.</p>
+                <p>
+                  <a href="mailto:info@techsavvy.com">info@techsavvy.com</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

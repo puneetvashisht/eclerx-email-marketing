@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 600px;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+      }
+      .header,
+      .footer {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+      }
+      .main {
+        display: flex;
+        /* flex-wrap: wrap; */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .content {
+        flex: 1 1 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        box-sizing: border-box;
+      }
+      .card1 {
+        /* flex-grow: 1; */
+        flex-shrink: 1;
+        flex-basis: calc(50% - 10px);
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
+      .card2 {
+        /* flex-grow: 3; */
+        /* flex-shrink: 0.5; */
+        flex-basis: calc(50% - 10px);
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Responsive Email with Flexbox</h1>
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="card1">
+            <h2>Card 1</h2>
+            <p>
+              This is the first card. It contains some text content to
+              illustrate the layout.
+            </p>
+          </div>
+          <div class="card2">
+            <h2>Card 2</h2>
+            <p>
+              This is the second card. It contains some text content to
+              illustrate the layout.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Card 3</h2>
+            <p>
+              This is the third card. It contains some text content to
+              illustrate the layout.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Card 4</h2>
+            <p>
+              This is the fourth card. It contains some text content to
+              illustrate the layout.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

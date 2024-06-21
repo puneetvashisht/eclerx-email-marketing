@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      @media screen and (max-width: 600px) {
+        .m-fluid {
+          width: 100% !important;
+        }
+
+        .cta-btn a {
+          font-size: 16px !important;
+          line-height: 24px !important;
+        }
+
+        .cta-btn span {
+          padding: 8px 24px !important;
+        }
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        input.fallback_ctrl:checked ~ #shopping-crt {
+          display: block !important;
+          max-height: none !important;
+          background-color: #f8f8f8;
+        }
+
+        input.fallback_ctrl:checked ~ #fallback {
+          display: none !important;
+        }
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        table.icons img {
+          width: 64px;
+          height: 64px;
+        }
+
+        #carousel {
+          display: block !important;
+          max-height: none !important;
+        }
+
+        #pbuds-orange:checked ~ div table table img.icon2,
+        #pbuds-mint:checked ~ div table table img.icon3,
+        #pbuds-charcoal:checked ~ div table table img.icon4 {
+          border-radius: 100%;
+          cursor: pointer;
+        }
+
+        img.icon1 {
+          position: relative;
+          border-radius: 100%;
+          cursor: pointer;
+        }
+
+        #pbuds-white:checked ~ div table table img.icon1 {
+          position: relative;
+          border-radius: 100%;
+          cursor: pointer;
+          border: 2px solid #d8d8d8 !important;
+          border-radius: 100%;
+          padding: 4px;
+          width: 52px;
+          height: 52px;
+        }
+
+        img.icon2,
+        #pbuds-white:checked ~ div table table img.icon1,
+        #pbuds-mint:checked ~ div table table img.icon3,
+        #pbuds-charcoal:checked ~ div table table img.icon4 {
+          border-radius: 100%;
+          cursor: pointer;
+        }
+
+        #pbuds-orange:checked ~ div table table img.icon2 {
+          position: relative;
+          border-radius: 100%;
+          cursor: pointer;
+          border: 2px solid #d8d8d8 !important;
+          border-radius: 100%;
+          padding: 4px;
+          width: 52px;
+          height: 52px;
+        }
+
+        img.icon3,
+        #pbuds-white:checked ~ div table table img.icon1,
+        #pbuds-orange:checked ~ div table table img.icon2,
+        #pbuds-charcoal:checked ~ div table table img.icon4 {
+          border-radius: 100%;
+          cursor: pointer;
+        }
+
+        #pbuds-mint:checked ~ div table table img.icon3 {
+          position: relative;
+          border-radius: 100%;
+          cursor: pointer;
+          border: 2px solid #d8d8d8 !important;
+          border-radius: 100%;
+          padding: 4px;
+          width: 52px;
+          height: 52px;
+        }
+
+        img.icon4,
+        #pbuds-white:checked ~ div table table img.icon1,
+        #pbuds-orange:checked ~ div table table img.icon2,
+        #pbuds-mint:checked ~ div table table img.icon3 {
+          border-radius: 100%;
+          cursor: pointer;
+        }
+
+        #pbuds-charcoal:checked ~ div table table img.icon4 {
+          position: relative;
+          border-radius: 100%;
+          cursor: pointer;
+          border: 2px solid #d8d8d8 !important;
+          border-radius: 100%;
+          padding: 4px;
+          width: 52px;
+          height: 52px;
+        }
+
+        #pbuds-white:checked ~ div div.content-1,
+        #pbuds-orange:checked ~ div div.content-2,
+        #pbuds-mint:checked ~ div div.content-3,
+        #pbuds-charcoal:checked ~ div div.content-4 {
+          display: block !important;
+        }
+
+        #pbuds-orange:checked ~ div div.content-1,
+        #pbuds-orange:checked ~ div div.content-3,
+        #pbuds-orange:checked ~ div div.content-4,
+        #pbuds-white:checked ~ div div.content-2,
+        #pbuds-white:checked ~ div div.content-3,
+        #pbuds-white:checked ~ div div.content-4,
+        #pbuds-mint:checked ~ div div.content-1,
+        #pbuds-mint:checked ~ div div.content-2,
+        #pbuds-mint:checked ~ div div.content-4,
+        #pbuds-charcoal:checked ~ div div.content-1,
+        #pbuds-charcoal:checked ~ div div.content-2,
+        #pbuds-charcoal:checked ~ div div.content-3 {
+          display: none !important;
+        }
+
+        #pbuds-white,
+        #pbuds-orange,
+        #pbuds-mint,
+        #pbuds-charcoal {
+          display: none;
+        }
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 600px) {
+        table.icons img {
+          width: 36px;
+          height: 36px;
+        }
+
+        .ios-hide {
+          display: none !important;
+        }
+
+        .hero-bg1 {
+          background-image: url(https://services.google.com/fh/files/emails/atc-pixelbuds-mobile-image-hero-2-white.png) !important;
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+          background-position: center !important;
+          width: 100% !important;
+          padding-top: 87% !important;
+        }
+
+        .hero-bg2 {
+          background-image: url(https://services.google.com/fh/files/emails/atc-pixelbuds-mobile-image-hero-2-orange.png) !important;
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+          background-position: center !important;
+          width: 100% !important;
+          padding-top: 87% !important;
+        }
+
+        .hero-bg3 {
+          background-image: url(https://services.google.com/fh/files/emails/atc-pixelbuds-mobile-image-hero-2-mint.png) !important;
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+          background-position: center !important;
+          width: 100% !important;
+          padding-top: 87% !important;
+        }
+
+        .hero-bg4 {
+          background-image: url(https://services.google.com/fh/files/emails/atc-pixelbuds-mobile-image-hero-2-charcoal.png) !important;
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+          background-position: center !important;
+          width: 100% !important;
+          padding-top: 87% !important;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        body[data-outlook-cycle] #fallback {
+          display: block !important;
+        }
+
+        body[data-outlook-cycle] #shopping-crt {
+          display: none !important;
+        }
+      }
+
+      .card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 16px 0;
+      }
+
+      .card img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      .card h3 {
+        font-family: "Google Sans", Arial, sans-serif;
+        font-size: 20px;
+        margin: 16px 0 8px;
+      }
+
+      .card p {
+        font-family: "Google Sans", Arial, sans-serif;
+        font-size: 16px;
+        color: #5f6368;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <table
+      bgcolor="#74aaec"
+      role="presentation"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+      "
+    >
+      <tbody>
+        <tr>
+          <td align="center" style="padding: 20px">
+            <h1
+              style="
+                font-family: 'Google Sans', Arial, sans-serif;
+                color: #ffffff;
+                margin: 0;
+              "
+            >
+              Introducing Pixel Buds Pro
+            </h1>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <input
+      type="checkbox"
+      id="fallback_ctrl"
+      class="fallback_ctrl"
+      style="display: none !important"
+      checked
+    />
+    <!-- FALLBACK -->
+    <table
+      id="fallback"
+      style="border-collapse: collapse; max-width: 600px; margin: auto"
+      bgcolor="#f8f8f8"
+      role="presentation"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <table
+              style="border-collapse: collapse; max-width: 600px; margin: auto"
+              role="presentation"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      border-collapse: collapse;
+                      font-family: 'Google Sans', Arial, sans-serif;
+                      font-weight: normal;
+                      padding-bottom: 10px;
+                    "
+                  >
+                    <!-- CTA BUTTON -->
+                    <table
+                      align="center"
+                      class="cta-btn"
+                      style="
+                        margin: 0 auto;
+                        padding: 0;
+                        border-spacing: 0;
+                        border-radius: 2px;
+                        background-color: #1a73e8;
+                        border-collapse: separate;
+                        font-weight: normal;
+                        color: #ffffff;
+                      "
+                      bgcolor="#1A73E8"
+                      role="presentation"
+                      cellpadding="0"
+                      cellspacing="0"
+                      border="0"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            style="
+                              border-collapse: collapse;
+                              padding: 0;
+                              text-align: left;
+                              color: #ffffff;
+                              border-radius: 4px;
+                              background-color: #1a73e8;
+                              border: 1px solid #1a73e8;
+                              font-family: 'Google Sans', Arial, sans-serif;
+                              font-weight: normal;
+                            "
+                            align="left"
+                            bgcolor="#1A73E8"
+                          >
+                            <a
+                              href="https://viewstripo.email/"
+                              target="_blank"
+                              style="
+                                text-align: center;
+                                text-decoration: none;
+                                border-radius: 2px;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #ffffff;
+                                font-family: 'Google Sans', Arial, sans-serif;
+                                font-weight: normal;
+                                letter-spacing: normal;
+                              "
+                              class="esd-frame-element esd-hover-element esdev-disable-select"
+                            >
+                              <span style="padding: 8px 24px; display: block">
+                                Shop Now
+                              </span>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- /CTA BUTTON -->
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      href="https://viewstripo.email/"
+                      style="
+                        color: #1a73e8;
+                        text-decoration: none;
+                        font-family: 'Google Sans', Arial, sans-serif;
+                        font-weight: normal;
+                        letter-spacing: normal;
+                      "
+                      class="esd-frame-element esd-hover-element esdev-disable-select"
+                      ><img
+                        src="https://services.google.com/fh/files/emails/crm-presto-preorder-desktop-image-hero-2-orange.png"
+                        width="600"
+                        class="m-fluid"
+                        style="border: none; display: block"
+                        border="0"
+                        alt
+                    /></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- /FALLBACK -->
+
+    <div
+      id="shopping-crt"
+      style="border-collapse: collapse; max-width: 600px; margin: auto"
+    >
+      <input
+        type="radio"
+        id="pbuds-white"
+        name="icon"
+        checked
+        style="display: none"
+      />
+      <input type="radio" id="pbuds-orange" name="icon" style="display: none" />
+      <input type="radio" id="pbuds-mint" name="icon" style="display: none" />
+      <input
+        type="radio"
+        id="pbuds-charcoal"
+        name="icon"
+        style="display: none"
+      />
+      <div
+        id="carousel"
+        style="display: none; max-height: 0px; overflow: hidden"
+      >
+        <table
+          width="100%"
+          role="presentation"
+          cellpadding="0"
+          cellspacing="0"
+          border="0"
+        >
+          <tbody>
+            <tr>
+              <td width="100%" align="center">
+                <div class="content-1 olcom-display hero-bg1">
+                  <img
+                    src="https://services.google.com/fh/files/emails/atc-pixelbuds-desktop-image-hero-2-white.png"
+                    width="515"
+                    class="hero-imgs ios-hide"
+                    alt
+                  />
+                </div>
+                <div
+                  class="content-2 olcom-hide hero-bg2"
+                  style="display: none"
+                >
+                  <img
+                    src="https://services.google.com/fh/files/emails/atc-pixelbuds-desktop-image-hero-2-orange.png"
+                    width="515"
+                    class="hero-imgs ios-hide"
+                    alt
+                  />
+                </div>
+                <div
+                  class="content-3 olcom-hide hero-bg3"
+                  style="display: none"
+                >
+                  <img
+                    src="https://services.google.com/fh/files/emails/atc-pixelbuds-desktop-image-hero-2-mint.png"
+                    width="515"
+                    class="hero-imgs ios-hide"
+                    alt
+                  />
+                </div>
+                <div
+                  class="content-4 olcom-hide hero-bg4"
+                  style="display: none"
+                >
+                  <img
+                    src="https://services.google.com/fh/files/emails/atc-pixelbuds-desktop-image-hero-2-charcoal.png"
+                    width="515"
+                    class="hero-imgs ios-hide"
+                    alt
+                  />
+                </div>
+                <div class="olcom-hide">
+                  <table
+                    class="icons"
+                    role="presentation"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                  >
+                    <tbody>
+                      <tr>
+                        <td style="padding-right: 15px">
+                          <label for="pbuds-white"
+                            ><img
+                              src="https://services.google.com/fh/files/emails/color-picker-white-desktop.png"
+                              class="icon1"
+                              alt
+                          /></label>
+                        </td>
+                        <td style="padding-right: 15px; padding-left: 15px">
+                          <label for="pbuds-orange"
+                            ><img
+                              src="https://services.google.com/fh/files/emails/color-picker-orange-desktop.png"
+                              class="icon2"
+                              alt
+                          /></label>
+                        </td>
+                        <td style="padding-right: 15px; padding-left: 15px">
+                          <label for="pbuds-mint"
+                            ><img
+                              src="https://services.google.com/fh/files/emails/color-picker-mint-desktop.png"
+                              class="icon3"
+                              alt
+                          /></label>
+                        </td>
+                        <td style="padding-left: 15px">
+                          <label for="pbuds-charcoal"
+                            ><img
+                              src="https://services.google.com/fh/files/emails/color-picker-charcoal-desktop.png"
+                              class="icon4"
+                              alt
+                          /></label>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION SECTION -->
+    <table
+      bgcolor="#ffffff"
+      role="presentation"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+      "
+    >
+      <tbody>
+        <tr>
+          <td style="padding: 24px">
+            <h2
+              style="
+                font-family: 'Google Sans', Arial, sans-serif;
+                color: #202124;
+                margin: 0 0 16px;
+              "
+            >
+              The Newest Generation of Pixel Buds
+            </h2>
+            <p
+              style="
+                font-family: 'Google Sans', Arial, sans-serif;
+                font-size: 16px;
+                color: #5f6368;
+                line-height: 1.5;
+                margin: 0 0 16px;
+              "
+            >
+              Enjoy rich sound quality, adaptive sound technology, and
+              hands-free access to the Google Assistant with Pixel Buds Pro.
+            </p>
+            <div class="buy-now-btn">
+              <a
+                href="https://store.google.com/us/product/pixel_buds_pro"
+                target="_blank"
+                style="
+                  display: inline-block;
+                  padding: 12px 24px;
+                  background-color: #74aaec;
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-family: 'Google Sans', Arial, sans-serif;
+                  font-size: 16px;
+                  border-radius: 4px;
+                  transition: background-color 0.3s ease;
+                "
+                >Buy Now</a
+              >
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- FEATURES SECTION -->
+    <table
+      width="100%"
+      bgcolor="#f8f8f8"
+      role="presentation"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="border-collapse: collapse; max-width: 600px; margin: auto"
+    >
+      <tbody>
+        <tr>
+          <td style="padding: 20px">
+            <h2
+              style="
+                font-family: 'Google Sans', Arial, sans-serif;
+                color: #202124;
+                text-align: center;
+              "
+            >
+              Features
+            </h2>
+            <div class="card">
+              <img
+                src="https://www.electronicshub.org/wp-content/uploads/2023/06/Active-Noise-Cancellation.jpg"
+                alt="Noise Cancellation"
+              />
+              <h3>Active Noise Cancellation</h3>
+              <p>
+                Enjoy a pure listening experience with our state-of-the-art
+                active noise cancellation technology.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://m.media-amazon.com/images/I/81yK8cWMtcL._AC_SL1500_.jpg"
+                alt="Long Battery Life"
+              />
+              <h3>Long Battery Life</h3>
+              <p>
+                With up to 31 hours of battery life, you can listen to your
+                favorite tunes all day long.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://m.media-amazon.com/images/I/810xB2pOoTL._AC_SL1500_.jpg"
+                alt="Water Resistant"
+              />
+              <h3>Water Resistant</h3>
+              <p>
+                Pixel Buds Max are water-resistant, making them perfect for
+                workouts and outdoor activities.
+              </p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- FOOTER -->
+    <table
+      bgcolor="#f8f8f8"
+      role="presentation"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+      "
+    >
+      <tbody>
+        <tr>
+          <td align="center" style="padding: 20px">
+            <p
+              style="
+                font-family: 'Google Sans', Arial, sans-serif;
+                color: #5f6368;
+                font-size: 14px;
+                margin: 0;
+              "
+            >
+              © 2024 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA
+              94043
+            </p>
+            <p
+              style="
+                font-family: 'Google Sans', Arial, sans-serif;
+                color: #5f6368;
+                font-size: 14px;
+                margin: 0;
+              "
+            >
+              <a
+                href="https://www.google.com/intl/en/policies/privacy/"
+                style="color: #1a73e8; text-decoration: none"
+                >Privacy Policy</a
+              >
+              |
+              <a
+                href="https://www.google.com/intl/en/policies/terms/"
+                style="color: #1a73e8; text-decoration: none"
+                >Terms of Service</a
+              >
+            </p>
+            <p
+              style="
+                font-family: 'Google Sans', Arial, sans-serif;
+                color: #5f6368;
+                font-size: 14px;
+                margin: 0;
+              "
+            >
+              Need help? Visit our
+              <a
+                href="https://support.google.com/"
+                style="color: #1a73e8; text-decoration: none"
+                >Help Center</a
+              >
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

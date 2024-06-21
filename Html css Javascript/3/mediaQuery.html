@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Flexbox Layout</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+      header,
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      main {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+      }
+      nav {
+        background-color: #ccc;
+        width: 200px;
+        padding: 20px;
+      }
+      article {
+        flex: 1;
+        padding: 20px;
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          width: 100%;
+        }
+        article {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 900px) {
+        nav {
+          width: 150px;
+        }
+        article {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <main>
+      <nav>Sidebar</nav>
+      <article>Main Content Area</article>
+    </main>
+    <footer>Footer</footer>
+  </body>
+</html>

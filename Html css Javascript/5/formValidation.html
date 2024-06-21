@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form onsubmit="return validateForm()">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="errorMessage" style="color: red"></p>
+
+    <script>
+      function validateForm() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var errorMessage = document.getElementById("errorMessage");
+
+        if (!email.includes("@")) {
+          errorMessage.textContent = "Please enter a valid email address.";
+          return false;
+        }
+        if (password.length < 8) {
+          errorMessage.textContent =
+            "Password must be at least 8 characters long.";
+          return false;
+        }
+        errorMessage.textContent = "";
+        return true;
+      }
+    </script>
+  </body>
+</html>

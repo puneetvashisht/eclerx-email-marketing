@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive E-commerce Newsletter</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+        max-width: 1200px;
+      }
+      header,
+      footer,
+      main {
+        display: flex;
+        padding: 20px;
+        background-color: #f0f0f0;
+        width: 100%;
+      }
+      header {
+        justify-content: center;
+        align-items: center;
+        background-color: #4caf50;
+        color: white;
+      }
+      header nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      footer {
+        justify-content: center;
+        text-align: center;
+      }
+      .sidebar {
+        flex: 0 0 250px;
+        padding: 20px;
+        background-color: #e0e0e0;
+      }
+      .main-content {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .product-card {
+        flex: 0 0 calc(33.33% - 20px);
+        margin: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .product-card img {
+        width: 100%;
+        height: auto;
+      }
+      .product-info {
+        padding: 20px;
+      }
+      .product-info h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .product-info p {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+        .product-card {
+          flex: 0 0 calc(50% - 20px);
+        }
+      }
+      @media (max-width: 600px) {
+        .product-card {
+          flex: 0 0 100%;
+        }
+        .sidebar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Company Logo</h1>
+        <nav>
+          <a href="#">Home</a> | <a href="#">Products</a> |
+          <a href="#">About</a> | <a href="#">Contact</a>
+        </nav>
+      </header>
+      <main>
+        <div class="sidebar">
+          <h2>Sidebar</h2>
+        </div>
+        <div class="main-content">
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 1" />
+            <div class="product-info">
+              <h3>Product 1</h3>
+              <p>Description of product 1</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 2" />
+            <div class="product-info">
+              <h3>Product 2</h3>
+              <p>Description of product 2</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 3" />
+            <div class="product-info">
+              <h3>Product 3</h3>
+              <p>Description of product 3</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 4" />
+            <div class="product-info">
+              <h3>Product 4</h3>
+              <p>Description of product 4</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 5" />
+            <div class="product-info">
+              <h3>Product 5</h3>
+              <p>Description of product 5</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/300" alt="Product 6" />
+            <div class="product-info">
+              <h3>Product 6</h3>
+              <p>Description of product 6</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          Contact us: email@example.com | Follow us: <a href="#">Facebook</a>,
+          <a href="#">Twitter</a>, <a href="#">Instagram</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

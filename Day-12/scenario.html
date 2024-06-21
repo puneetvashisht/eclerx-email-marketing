@@ -1,0 +1,351 @@
+<!-- TechInnovate Email Campaign Preparation
+Background:
+TechInnovate is launching a new product, the SmartWatch Pro, and wants to promote it via an email campaign 
+to existing and potential customers. The goal is to generate interest, drive traffic to their website, 
+and encourage sign-ups for product updates.
+
+Tasks:
+Email Content Integration:
+
+Task: Integrate actual content details about the TechInnovate SmartWatch Pro into the email template.
+Details: Include specific features, benefits, and unique selling points of the SmartWatch Pro. Ensure the content
+is engaging and encourages readers to learn more.
+
+CTA Button Adjustment:
+
+Task: Customize the "Shop Now" button in the hero section.
+Details: Replace "#" in the href attribute with the actual URL of the TechInnovate product page where customers 
+can purchase the SmartWatch Pro.
+
+Subscription Form Integration:
+
+Task: Configure the email subscription form.
+Details: Ensure the form is properly connected to the company's email subscription service or CRM system. 
+Validate that the form captures email addresses correctly and includes required field validation.
+
+Social Media Links Verification:
+
+Task: Verify and update social media icons and links.
+Details: Replace placeholder URLs and images with actual URLs to TechInnovate's official social media profiles 
+(e.g., Facebook, Twitter, Instagram, LinkedIn). 
+Ensure each link opens in a new tab for user convenience. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+      }
+      /* Responsive styles */
+      @media screen and (max-width: 600px) {
+        .main-table {
+          width: 100% !important;
+        }
+        .hero-image {
+          width: 100% !important;
+          height: auto !important;
+        }
+        .content,
+        .form-section {
+          padding: 10px !important;
+        }
+        .features-table td {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .header {
+          text-align: center !important;
+        }
+        .header img,
+        .header h1 {
+          display: block;
+          margin: 0 auto !important;
+        }
+        .footer {
+          text-align: center !important;
+        }
+        .footer td {
+          display: block;
+          margin: 10px 0;
+        }
+      }
+      /* Styles */
+      .main-table {
+        width: 600px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .header {
+        background-color: #0073e6;
+        padding: 20px;
+        text-align: left;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+      .header img {
+        max-width: 50px;
+        margin-right: 20px;
+        border-radius: 50%;
+        object-fit: contain;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .hero {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      .hero img {
+        width: 100%;
+        height: auto;
+      }
+      .hero .cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(119, 119, 119, 0.7);
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 4px;
+        text-decoration: none;
+        backdrop-filter: blur(2px);
+      }
+      .content {
+        padding: 20px;
+        text-align: left;
+      }
+      .content h2 {
+        color: #0073e6;
+      }
+      .content p {
+        line-height: 1.6;
+      }
+      .features-table {
+        width: 100%;
+        margin-top: 20px;
+        border-spacing: 10px;
+      }
+      .features-table td {
+        background-color: white;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .features-table h3 {
+        color: #0073e6;
+        margin-bottom: 10px;
+      }
+      .form-section {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+      }
+      .form-section h3 {
+        color: #0073e6;
+      }
+      .form-section form {
+        margin: 0 auto;
+        max-width: 400px;
+      }
+      .form-section input[type="email"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .form-section input[type="submit"] {
+        background-color: #0073e6;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+      }
+      .footer {
+        background-color: #f9f9f9;
+        padding: 20px;
+        text-align: left;
+        border-top: 1px solid #ddd;
+      }
+      .footer td {
+        color: #777;
+        font-size: 14px;
+      }
+      .footer a {
+        color: #0073e6;
+        text-decoration: none;
+      }
+      .footer .social-media a {
+        margin: 0 10px;
+        display: inline-block;
+      }
+      .footer .social-media img {
+        max-width: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="main-table" role="presentation" aria-hidden="true">
+      <tr>
+        <td>
+          <!-- Header -->
+          <table width="100%" role="banner">
+            <tr>
+              <td class="header">
+                <img src="https://picsum.photos/50" alt="TechInnovate Logo" />
+                <h1>TechInnovate</h1>
+              </td>
+            </tr>
+          </table>
+          <!-- Hero Section -->
+          <table width="100%" role="presentation">
+            <tr>
+              <td class="hero">
+                <img
+                  src="https://picsum.photos/600/300"
+                  alt="TechInnovate SmartWatch Pro"
+                  class="hero-image"
+                />
+                <a href="#" class="cta" role="button" aria-label="Shop Now"
+                  >Shop Now</a
+                >
+              </td>
+            </tr>
+          </table>
+          <!-- Content -->
+          <table width="100%" class="content" role="presentation">
+            <tr>
+              <td>
+                <h2>Introducing the TechInnovate SmartWatch Pro</h2>
+                <p>
+                  We are thrilled to unveil the TechInnovate SmartWatch Pro, our
+                  latest innovation designed to enhance your lifestyle with
+                  cutting-edge technology and sleek design.
+                </p>
+                <!-- Features Cards -->
+                <table class="features-table" role="presentation">
+                  <tr>
+                    <td>
+                      <h3>Advanced Health Tracking</h3>
+                      <p>
+                        Monitor your health with precision using our
+                        state-of-the-art sensors.
+                      </p>
+                    </td>
+                    <td>
+                      <h3>Seamless Connectivity</h3>
+                      <p>
+                        Stay connected with notifications and calls directly on
+                        your wrist.
+                      </p>
+                    </td>
+                    <td>
+                      <h3>Sleek Design</h3>
+                      <p>
+                        Experience a stylish look that complements both casual
+                        and professional settings.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- Form Section -->
+          <table width="100%" class="form-section" role="presentation">
+            <tr>
+              <td>
+                <h3>Stay Updated</h3>
+                <form action="#" method="post" role="form">
+                  <label for="email" class="visually-hidden"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    aria-required="true"
+                  />
+                  <input type="submit" value="Subscribe" />
+                </form>
+              </td>
+            </tr>
+          </table>
+          <!-- Footer Section -->
+          <table width="100%" class="footer" role="contentinfo">
+            <tr>
+              <td>
+                <table width="100%" role="presentation">
+                  <tr>
+                    <td>
+                      <p>© 2024 TechInnovate. All rights reserved.</p>
+                      <p>
+                        Contact us at:
+                        <a href="mailto:info@techinnovate.com"
+                          >info@techinnovate.com</a
+                        >
+                      </p>
+                      <p>
+                        <a href="#">Unsubscribe</a> |
+                        <a href="#">Privacy Policy</a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="social-media">
+                      <a href="#"
+                        ><img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREhIStQW6CVwkxfySAEk7m-ixijfzEEnZs-w&s"
+                          alt="Facebook"
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg"
+                          alt="X"
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwH--J-ZMUg8puNfUxE6YXQi3yVHuAORDxow&s"
+                          alt="Instagram"
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
+                          alt="LinkedIn"
+                      /></a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

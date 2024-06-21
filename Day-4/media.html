@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 100%;
+        max-width: 900px;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+      }
+      .header,
+      .footer {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+      }
+      .main {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .content,
+      .image-container,
+      .cards-container {
+        margin-bottom: 20px;
+      }
+      .content p {
+        margin: 0 0 20px;
+      }
+      .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .card {
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        flex: 1 1 calc(50% - 20px);
+      }
+      @media only screen and (max-width: 600px) {
+        .cards-container {
+          flex-direction: column;
+        }
+        .card {
+          flex: 1 1 calc(30% - 20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Responsive Email with Media Queries</h1>
+      </div>
+      <div class="main">
+        <div class="content">
+          <p>
+            Welcome to our responsive email example. This section contains some
+            introductory text to engage the reader and provide context for the
+            content that follows.
+          </p>
+          <p>
+            We aim to demonstrate how to create a visually appealing and
+            responsive email layout using Flexbox and media queries. This
+            ensures the email looks great on all devices, from desktops to
+            mobile phones.
+          </p>
+        </div>
+        <div class="image-container">
+          <img src="https://via.placeholder.com/600x200" alt="Example Image" />
+        </div>
+        <div class="cards-container">
+          <div class="card">
+            <h2>Card 1</h2>
+            <p>
+              This is the first card. It contains some text content to
+              illustrate the layout.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Card 2</h2>
+            <p>
+              This is the second card. It contains some text content to
+              illustrate the layout.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Card 3</h2>
+            <p>
+              This is the third card. It contains some text content to
+              illustrate the layout.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Card 4</h2>
+            <p>
+              This is the fourth card. It contains some text content to
+              illustrate the layout.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox Layout</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+      header,
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      main {
+        display: flex;
+        flex: 1;
+      }
+      nav {
+        background-color: #ccc;
+        width: 200px;
+        padding: 20px;
+      }
+      article {
+        flex: 1;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <main>
+      <nav>Sidebar</nav>
+      <article>Main Content Area</article>
+    </main>
+    <footer>Footer</footer>
+  </body>
+</html>

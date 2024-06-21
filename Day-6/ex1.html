@@ -1,0 +1,115 @@
+<!-- Responsive Pricing Table Email with Flex Properties
+Objective: Create a responsive pricing table email that includes a header, multiple pricing plans with features, and a call-to-action button. Use flex-basis, flex-grow, and flex-shrink to control the layout and adjust based on screen size.
+
+Task:
+
+Create an HTML email with a header, multiple pricing plans, and a call-to-action button.
+Use Flexbox properties to control the layout of pricing plans in different screen sizes.
+Use media queries for multiple breakpoints to adjust the layout for different devices. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        padding: 20px;
+      }
+      .header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .pricing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .pricing-plan {
+        flex: 1 1 30%;
+        margin: 10px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+      .pricing-plan h2 {
+        margin: 10px 0;
+      }
+      .pricing-plan ul {
+        list-style: none;
+        padding: 0;
+      }
+      .pricing-plan ul li {
+        margin: 10px 0;
+      }
+      .cta {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .cta button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      @media (max-width: 900px) {
+        .pricing-plan {
+          flex-basis: 45%;
+          flex-grow: 1;
+        }
+      }
+      @media (max-width: 600px) {
+        .pricing {
+          flex-direction: column;
+        }
+        .pricing-plan {
+          flex-basis: 100%;
+          flex-grow: 1;
+          flex-shrink: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Our Pricing Plans</div>
+      <div class="pricing">
+        <div class="pricing-plan">
+          <h2>Basic Plan</h2>
+          <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+          </ul>
+          <div class="cta"><button>Select Plan</button></div>
+        </div>
+        <div class="pricing-plan">
+          <h2>Standard Plan</h2>
+          <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+            <li>Feature 4</li>
+          </ul>
+          <div class="cta"><button>Select Plan</button></div>
+        </div>
+        <div class="pricing-plan">
+          <h2>Premium Plan</h2>
+          <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+            <li>Feature 4</li>
+            <li>Feature 5</li>
+          </ul>
+          <div class="cta"><button>Select Plan</button></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

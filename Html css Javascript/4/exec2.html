@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Person Object</title>
+  </head>
+  <body>
+    <script>
+      function Person(name, age, occupation) {
+        this.name = name;
+        this.age = age;
+        this.occupation = occupation;
+        this.introduce = function () {
+          return (
+            "Hello, my name is " +
+            this.name +
+            ". I am a " +
+            this.occupation +
+            "."
+          );
+        };
+        this.checkVotingEligibility = function () {
+          if (this.age >= 18) {
+            return this.name + " is eligible to vote.";
+          } else {
+            return this.name + " is not eligible to vote.";
+          }
+        };
+      }
+
+      let person1 = new Person("John Doe", 25, "web developer");
+
+      console.log(person1.introduce());
+
+      console.log(person1.checkVotingEligibility());
+
+      let person2 = new Person("Jane Smith", 16, "student");
+      console.log(person2.introduce());
+      console.log(person2.checkVotingEligibility());
+
+      function categorizeAge(person) {
+        if (person.age < 13) {
+          return person.name + " is a child.";
+        } else if (person.age < 20) {
+          return person.name + " is a teenager.";
+        } else if (person.age < 65) {
+          return person.name + " is an adult.";
+        } else {
+          return person.name + " is a senior.";
+        }
+      }
+
+      console.log(categorizeAge(person1));
+      console.log(categorizeAge(person2));
+    </script>
+  </body>
+</html>

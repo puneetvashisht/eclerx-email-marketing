@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advanced Calculations</title>
+  </head>
+  <body>
+    <script>
+      function calculateSum(numbers) {
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          sum += numbers[i];
+        }
+        return sum;
+      }
+
+      function calculateAverage(numbers) {
+        let sum = calculateSum(numbers);
+        return sum / numbers.length;
+      }
+
+      function findMax(numbers) {
+        let max = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+          if (numbers[i] > max) {
+            max = numbers[i];
+          }
+        }
+        return max;
+      }
+
+      function findMin(numbers) {
+        let min = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+          if (numbers[i] < min) {
+            min = numbers[i];
+          }
+        }
+        return min;
+      }
+
+      let numbers = [10, 5, 8, 3, 7];
+
+      console.log("Numbers: " + numbers);
+      console.log("Sum: " + calculateSum(numbers));
+      console.log("Average: " + calculateAverage(numbers));
+      console.log("Max: " + findMax(numbers));
+      console.log("Min: " + findMin(numbers));
+    </script>
+  </body>
+</html>

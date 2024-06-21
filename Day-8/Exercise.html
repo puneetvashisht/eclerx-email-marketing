@@ -1,0 +1,198 @@
+<!-- Design a responsive promotional email for a fashion store's special event. 
+ The email should include a header with the company logo and navigation links,
+ a featured banner image that changes based on the screen size, a section showcasing sale items with
+images, descriptions, and prices, and a footer with contact information and social media links. Additionally,
+ ensure all images are responsive.
+
+Scenario:
+You are working for a fashion e-commerce store, and you need to create a promotional email for an upcoming special event.
+The email should look professional and be fully responsive, adjusting beautifully on all devices.
+
+Tasks:
+Understanding Responsive Design in Emails:
+
+Task 1.1: Define what responsive design is and its importance in email design.
+Task 1.2: Explain how media queries work and how they are used in email design.
+Task 1.3: Describe the concept of mobile-first design and its advantages.
+Task 1.4: Provide strategies to ensure emails look good on all devices.
+Implementing Responsive Design:
+
+Task 2.1: Create the header with the company logo and navigation links.
+Task 2.2: Design a banner section where the background image URL changes based on screen sizes (desktop, tablet, and mobile).
+Task 2.3: Showcase a section with sale items, each including an image, description, and price. Ensure images are responsive.
+Task 2.4: Create a footer with contact information and social media links.
+Optimizing Images for Email:
+
+Task 3.1: Use best practices for using images in emails.
+Task 3.2: Optimize images for email to reduce load times without sacrificing quality.
+Task 3.3: Demonstrate how to use background images in email design.
+Task 3.4: Discuss the importance of adding alt text to images for accessibility and deliverability. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Store Special Event</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+      .email-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+      }
+      .header {
+        padding: 20px 0;
+        background-color: #333;
+        color: white;
+      }
+      .header .logo-container {
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+      .header img {
+        max-width: 100%;
+        height: auto;
+      }
+      .navigation {
+        text-align: center;
+      }
+      .navigation a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+      }
+      .banner {
+        width: 100%;
+        height: 250px;
+        text-align: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .banner h2 {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      .content {
+        padding: 20px 0;
+      }
+      .product {
+      }
+      .product img {
+        width: 100%;
+        height: auto;
+      }
+      .product h3,
+      .product p {
+        padding: 10px;
+        font-family: "Montserrat", sans-serif;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #333;
+        color: #fff;
+      }
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media (max-width: 900px) {
+        .product {
+        }
+      }
+      @media (max-width: 600px) {
+        .product {
+        }
+        .header .logo-container {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      @media (min-width: 901px) {
+        .banner {
+        }
+      }
+      @media (max-width: 900px) {
+        .banner {
+        }
+      }
+      @media (max-width: 600px) {
+        .banner {
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <div class="logo-container">
+          <img src="https://picsum.photos/id/1011/200/200" alt="Company Logo" />
+        </div>
+        <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="banner">
+        <h2>Special Event! Limited Time Offer</h2>
+      </div>
+      <div class="content">
+        <div class="product">
+          <img src="https://picsum.photos/id/1021/300/300" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>$19.99</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/id/1022/300/300" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$29.99</p>
+          <p>
+            Proin bibendum urna ut est posuere, sit amet fermentum libero
+            efficitur.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/id/1023/300/300" alt="Product 3" />
+          <h3>Product 3</h3>
+          <p>$39.99</p>
+          <p>
+            Nullam hendrerit metus id velit cursus, a venenatis neque varius.
+          </p>
+        </div>
+        <div class="product">
+          <img src="https://picsum.photos/id/1024/300/300" alt="Product 4" />
+          <h3>Product 4</h3>
+          <p>$49.99</p>
+          <p>Fusce a eros eget purus ultricies tempus ac a felis.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Contact us: email@example.com</p>
+        <p>
+          Follow us: <a href="#">Facebook</a>, <a href="#">Twitter</a>,
+          <a href="#">Instagram</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

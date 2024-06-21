@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Email Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      .email-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+      }
+      .header,
+      .footer {
+        background-color: #007bff;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .button {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 10px 0;
+      }
+      .high-contrast {
+        color: #000000;
+        background-color: #ffffff;
+        padding: 10px;
+        border: 1px solid #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <header class="header">
+        <h1>Accessible Email Example</h1>
+      </header>
+      <main class="content">
+        <h2>Using Semantic HTML</h2>
+        <p>
+          This is an example of an email that uses semantic HTML elements for
+          better accessibility.
+        </p>
+        <ul>
+          <li>Use headings to define sections</li>
+          <li>Use lists for lists of items</li>
+          <li>Use landmarks like header, nav, main, and footer</li>
+        </ul>
+        <a
+          href="https://example.com"
+          class="button"
+          aria-label="Learn more about accessibility"
+          >Learn More</a
+        >
+        <h2>Adding ARIA Labels</h2>
+        <h3 id="newsletter-signup">Newsletter Signup</h3>
+        <p aria-labelledby="newsletter-signup">
+          Sign up for our newsletter to stay updated.
+        </p>
+        <form action="https://example.com/subscribe" method="post">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-describedby="email-desc"
+          />
+          <span id="email-desc">Enter your email address to subscribe.</span>
+          <button type="submit" class="button">Subscribe</button>
+        </form>
+        <h2>Color Contrast and Readability</h2>
+        <p class="high-contrast">
+          This text has high contrast with its background, making it easy to
+          read.
+        </p>
+      </main>
+      <footer class="footer">
+        <p>
+          You're receiving this email because you subscribed to our updates.
+        </p>
+        <p>
+          <a href="https://example.com/unsubscribe" style="color: #ffffff"
+            >Unsubscribe</a
+          >
+          |
+          <a href="https://example.com/privacy" style="color: #ffffff"
+            >Privacy Policy</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

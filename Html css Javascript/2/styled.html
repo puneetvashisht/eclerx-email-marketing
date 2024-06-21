@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>John Doe's Profile</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .profile-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        color: #666;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #000;
+        font-size: 1em;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+
+      ul li {
+        background-color: #e7e7e7;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      img {
+        border: 2px solid #ccc;
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+      }
+
+      img:hover {
+        transform: scale(1.05);
+      }
+
+      .highlight {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      .highlight:hover {
+        color: #b30000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-container">
+      <h1>John Doe</h1>
+      <h2>Bio</h2>
+      <p>Hello! My name is John Doe. I am a web developer.</p>
+      <ul>
+        <li>Coding</li>
+        <li>Reading</li>
+        <li>Hiking</li>
+      </ul>
+      <img src="https://picsum.photos/200/300" alt="Profile Picture" />
+      <br />
+      <a href="https://picsum.photos/200/300" class="highlight"
+        >My Favorite Website</a
+      >
+    </div>
+  </body>
+</html>

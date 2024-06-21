@@ -1,0 +1,262 @@
+<!-- Scenario: Launching an Email Marketing Campaign for FitLife
+You are part of the marketing team at FitLife, a wellness company dedicated to promoting healthy lifestyles.
+Your team is launching a new monthly newsletter aimed at providing subscribers with valuable health tips, articles, 
+and exclusive promotions. As part of this initiative, you've been tasked with creating an engaging and accessible 
+email template for the inaugural edition of the newsletter.
+
+Tasks:
+Create a Compelling Header:
+
+Design a header that prominently displays the newsletter name and brand identity to grab the reader's attention.
+Ensure the header includes the company logo and a personalized greeting.
+
+Feature Article:
+
+Highlight a key article from the newsletter, showcasing its relevance and encouraging readers to engage with the content.
+Use an eye-catching image and a compelling call-to-action (CTA) button to direct readers to the full article.
+
+Subscription Form:
+
+Include a user-friendly subscription form allowing readers to sign up for the newsletter directly from the email.
+Ensure the form collects essential information such as email, name, and content preferences.
+
+Special Offer:
+
+Promote a special offer or discount to incentivize new subscribers and drive engagement.
+Use a visually appealing image or GIF to draw attention to the offer.
+ -->
+
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      table {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background-color: #5d84ac;
+        color: #ffffff;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .header img {
+        max-width: 100px;
+        height: auto;
+        margin-right: 20px;
+      }
+      .header h1 {
+        margin: 0;
+      }
+      .content {
+        padding: 30px;
+        text-align: center;
+      }
+      .content h2 {
+        color: #444;
+        font-size: 24px;
+        margin-top: 30px;
+      }
+      .content p {
+        color: #444;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .button {
+        background-color: #27ae60;
+        color: #ffffff;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #219653;
+      }
+      form label {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+        color: #2c3e50;
+        font-size: 18px;
+      }
+      form input[type="email"],
+      form input[type="text"],
+      form select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+      form button[type="submit"] {
+        background-color: #27ae60;
+        color: #ffffff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+      form button[type="submit"]:hover {
+        background-color: #219653;
+      }
+
+      .background {
+        width: 100%;
+        height: 200px;
+      }
+
+      .footer {
+        background-color: #5d84ac;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+      }
+      .footer a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .background .small-screen {
+        background-image: url("https://picsum.photos/600/200?random=1");
+      }
+      .background .medium-screen {
+        background-image: url("https://picsum.photos/800/400?random=2");
+      }
+      .background .large-screen {
+        background-image: url("https://picsum.photos/1000/500?random=3");
+      }
+
+      @media (max-width: 599px) {
+        .background {
+          background-image: url("https://picsum.photos/600/200?random=1");
+        }
+      }
+
+      @media (min-width: 600px) and (max-width: 900px) {
+        .background {
+          background-image: url("https://picsum.photos/600/200?random=2");
+        }
+      }
+      @media (min-width: 901px) {
+        .background {
+          background-image: url("https://picsum.photos/600/200?random=3");
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <table class="header" width="100%">
+            <tr>
+              <td align="left" valign="middle">
+                <img src="https://picsum.photos/50" alt="FitLife Logo" />
+              </td>
+              <td align="center" valign="middle">
+                <h1>FitLife Monthly Newsletter</h1>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="content">
+          <h2>Welcome to Our New Edition</h2>
+          <p>
+            Stay updated with the latest health tips, articles, and exclusive
+            promotions.
+          </p>
+          <h2>Featured Article: The Benefits of a Balanced Diet</h2>
+          <div class="background"></div>
+          <p>
+            Discover how a balanced diet can improve your overall health and
+            wellbeing.
+          </p>
+          <a
+            href="https://example.com"
+            class="button"
+            aria-label="Read the full article on the benefits of a balanced diet"
+            >Read Full Article</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table width="100%">
+            <tr>
+              <td class="content">
+                <h2>Subscribe for More Updates</h2>
+                <p aria-labelledby="newsletter-signup">
+                  Join our newsletter for the latest health tips and exclusive
+                  offers.
+                </p>
+                <form action="https://fitlife.com/subscribe" method="post">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required />
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required />
+                  <label for="preferences">Preferences:</label>
+                  <select id="preferences" name="preferences">
+                    <option value="nutrition">Nutrition</option>
+                    <option value="exercise">Exercise</option>
+                    <option value="wellbeing">Wellbeing</option>
+                  </select>
+                  <button type="submit">Subscribe</button>
+                </form>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table width="100%">
+            <tr>
+              <td class="content">
+                <h2>Special Offer</h2>
+                <p>Get 10% off on your first purchase!</p>
+                <img
+                  src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHY3Njgwb2JvbGNxd2N3dTA5eTBvbXFxNmhtOWdubDcxcDM1M3VhdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6fJ6dOc8NPAgv7FK/giphy.webp"
+                  alt="Special Offer"
+                />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+          <p>
+            You're receiving this email because you subscribed to FitLife
+            updates.
+          </p>
+          <p>
+            <a href="https://fitlife.com/unsubscribe">Unsubscribe</a> |
+            <a href="https://fitlife.com/privacy">Privacy Policy</a>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
